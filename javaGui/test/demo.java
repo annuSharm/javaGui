@@ -80,6 +80,16 @@ public class demo extends javax.swing.JFrame {
         jMenu1.setText("PaperType ");
 
         jMenu8.setText("100 GSM Maplitho");
+        jMenu8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu8MouseClicked(evt);
+            }
+        });
+        jMenu8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu8ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenu8);
 
         jMenu9.setText("Orient");
@@ -165,6 +175,16 @@ public class demo extends javax.swing.JFrame {
     private void jMenu5StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jMenu5StateChanged
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenu5StateChanged
+
+    private void jMenu8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu8ActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_jMenu8ActionPerformed
+
+    private void jMenu8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu8MouseClicked
+        // TODO add your handling code here:
+        list1.add("100GSM");
+    }//GEN-LAST:event_jMenu8MouseClicked
 
     /**
      * @param args the command line arguments

@@ -22,7 +22,38 @@ public class Paper {
     void write(){
         System.out.println("Adarsh.Paper.write()");
     }
+    static float getPriceOfSize(String s1)
+    {
+        switch (s1){
+            case "A1" :
+                return 0.54f;
+            case "A2" :
+                return 0.65f;
+            case "A3" :
+                return 0.41f;
+            case "A4" :
+                return 0.5f;
+            case "A8" :
+                return 0.6f;
+            case "A16" :
+                return 0.7f;
+             default:
+                 return 1f;
+
+        }
+        
+                
+    }
+    void showPaper()
+    {
+        System.out.println("Cost:- "+this.size+" Quality"+this.quality+" Type:-"+this.type+" Orientation:-"+this.orientation);
+    }
+    float costPaper()
+    {
+        return this.size*this.qty;
+    }
 }
+
 class print {
   String colour;  
 }
