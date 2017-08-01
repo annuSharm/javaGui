@@ -10,14 +10,25 @@ package Adarsh;
  * @author admin
  */
 public class Paper {
-    String type,size,partition,orientation;
-    float cost;
-    int qty;
-    Paper(String t, String s, String p, String o, int q){
+    String type,quality,orientation;
+    float size,cost,qty;
+    Paper(String t, String qua, String o, float s, float q){
         type=t;
-        size=s;
-        partition=p;
+        quality=qua;
         orientation=o;
+        size=s;       
         qty=q;
+    }
+    void write(){
+        System.out.println("Adarsh.Paper.write()");
+    }
+}
+class print {
+  String colour;  
+}
+class total {
+    public static void main(String[] args) {
+        Paper a=new Paper("a","b","c",2,3);
+        a.write();
     }
 }
