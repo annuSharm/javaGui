@@ -19,9 +19,6 @@ public class Paper {
         size=s;       
         qty=q;
     }
-    void write(){
-        System.out.println("Adarsh.Paper.write()");
-    }
     static float getPriceOfSize(String s1)
     {
         switch (s1){
@@ -41,8 +38,23 @@ public class Paper {
                  return 1f;
 
         }
-        
-                
+    }
+    
+    static float getPriceOfType(String s2){
+        switch(s2){
+            case "Ledger" ://cardsheet,colour,duplicate,artpaper
+                return 1f;
+            case "Cardsheet" :
+                return 5f;
+            case "Colour" :
+                return 2f;
+            case "Duplicate" :
+                return 0.5f;
+            case "Art Paper" :
+                return 3f;
+            default :
+                return 1f;
+        }
     }
     void showPaper()
     {
@@ -55,11 +67,14 @@ public class Paper {
 }
 
 class print {
-  String colour;  
+    String colour,side;
+    print (String c, String s){
+        colour=c;
+        side=s;
+    }
 }
 class total {
     public static void main(String[] args) {
         Paper a=new Paper("a","b","c",2,3);
-        a.write();
     }
 }
