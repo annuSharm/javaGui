@@ -9,10 +9,10 @@ package Adarsh;
  *
  * @author admin
  */
-public class Paper {
-    String type,quality,orientation;
-    float size,cost,qty;
-    Paper(String t, String qua, String o, float s, float q){
+public class Paper1 {
+    String quality,orientation;
+    float type,size,cost,qty;
+    Paper1(float t, String qua, String o, float s, float q){
         type=t;
         quality=qua;
         orientation=o;
@@ -62,19 +62,19 @@ public class Paper {
     }
     float costPaper()
     {
-        return this.size*this.qty;
+        return this.size*this.qty*this.type;
     }
 }
 
-class print {
+class print1 {
     String colour,side;
-    print (String c, String s){
+    print1 (String c, String s){
         colour=c;
         side=s;
     }
 }
-class total {
+class total1 {
     public static void main(String[] args) {
-        Paper a=new Paper("a","b","c",2,3);
+        //Paper a=new Paper(5,"b","c",2,3);
     }
 }
