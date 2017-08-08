@@ -1,11 +1,10 @@
 
-package Adarsh;
+package Aditi;
 
-
-public class Paper {
+public class paper {
     String quality,orientation;
     float size,cost,qty,type;
-    Paper(float t, String qua, String o, float s, float q, float c)
+    paper(float t, String qua, String o, float s, float q, float c)
     {
         type=t;
         quality=qua;
@@ -14,10 +13,7 @@ public class Paper {
         qty=q;
         cost=c;
     }
-   /* void write(){
-        System.out.println(" ");
-    }
-    */
+
     static float getPriceOfSize(String s1)
     {
         switch (s1){
@@ -67,36 +63,91 @@ public class Paper {
         return this.size*this.qty*this.type;
     }
 }
-class ArtPaper extends Paper
+/*class ArtPaper extends paper
 {
 String type;
 
-}
+}*/
 
 class print {
- 
-    String colour,sides, printType;  
+    
+    int PrintQuantity;
+    float color,sides, printCost;
+    String printType;
 
-    print(String col, String Si, String pt)
+    print(float col, float Si, String pt, float pc,int pq)
     {
-        colour= col;
+        color= col;
         sides=Si;
         printType=pt;
+        printCost=pc;
+        PrintQuantity=pq;
     }
      
-    static float colourCost(c1)
+    static float getcolorCost(String c1)
     {
     switch(c1)
     {
-    
-    
+        case"colourful":
+            return 2f;
+        default:
+           return 1f;  
     }
-        
+    }
     
+    static float getsidesCost(String s2)
+    {
+    switch(s2)
+    {
+        case"double":
+            return 1f;
+        default:
+           return 2f;  
+    }
+    }
+   
+    void showprint()
+    {
+        System.out.println("PrintCost:- "+this.printCost+" PrintType:-"+this.printType+" Sides:-"+this.sides+"Color:-"+this.color+"PrintQuantity:-"+this.PrintQuantity);
+    }
+    float costOfPrint()
+    {
+        return this.sides*this.color*this.PrintQuantity;
     }
 }
+
+class bind
+{
+    float bindType;
+    
+    bind(float bt)
+    {
+    bindType=bt;
+    }
+    
+    static float getBindType(String b1)
+    {
+        switch(b1)
+        {
+        case"Spiral":
+          return 20f;
+        case"HardBinding":  
+          return 60f;
+        default:
+          return 1f;
+        }
+    }
+        
+    void BindCost()
+    {
+      System.out.println("BindCost:"+this.bindType);  
+    }
+     
+}
 class total {
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
+        
         
        
     }
